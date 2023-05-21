@@ -42,7 +42,6 @@
 
 .photo-details-modal--image {
   width: 60%;
-  border-radius: 8px;
   align-self: center;
   margin-top: 25px;
 }
@@ -75,4 +74,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
 }

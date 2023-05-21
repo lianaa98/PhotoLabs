@@ -7,7 +7,7 @@ import PhotoList from '../components/PhotoList';
 
 function HomeRoute(props) {
 
-  const {favPhotoExist, like, toggleModalState, PhotoData, clickImgSetURL} = props;
+  const {favPhotoExist, like, toggleModalState, PhotoData, clickImgSetID} = props;
 
   return (
     <div className="home-route">
@@ -15,7 +15,7 @@ function HomeRoute(props) {
       <PhotoList photos={PhotoData} 
       like={like} 
       toggleModalState={toggleModalState}
-      clickImgSetURL={clickImgSetURL} />
+      clickImgSetID={clickImgSetID} />
     </div>
   );
 }

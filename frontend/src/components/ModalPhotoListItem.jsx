@@ -3,19 +3,14 @@ import React from 'react';
 import PhotoFavButton from './PhotoFavButton';
 import '../styles/PhotoListItem.scss';
 
-const PhotoListItem = (props) => {
-  const { username, imageSource, id, like, toggleModalState, clickImgSetID, hideUserName, city, country } = props;
+const ModalPhotoListItem = (props) => {
+  const { username, imageSource, id, like, hideUserName, city, country } = props;
 
-  const clickHandler = () => {
-    toggleModalState();
-    clickImgSetID(id);
-  };
   return (
     <div className="photo-list-item">
-      <PhotoFavButton like={like} photo_id={id} />
+      <PhotoFavButton photo_id={id} like={like}/>
       <img className="photo-list--image"
-        src={imageSource}
-        onClick={clickHandler} />
+        src={imageSource} />
       <div className='photo-list--user-details'>
         <div className="photo-list--user-profile"></div>
         <div className='photo-list--user-info'>
@@ -29,11 +24,5 @@ const PhotoListItem = (props) => {
   );
 };
 
-PhotoListItem.defaultProps = {
-  username: 'Jacob',
-  imageSource: `${process.env.PUBLIC_URL}/Image.jpg`,
-  id: 1,
-  hideUserName: false,
-};
 
-export default PhotoListItem;
+export default ModalPhotoListItem;

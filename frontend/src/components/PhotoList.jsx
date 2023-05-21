@@ -7,7 +7,7 @@ import '../styles/PhotoList.scss';
 
 const PhotoList = (props) => {
 
-  const { photos, like, toggleModalState, clickImgSetURL } = props;
+  const { photos, like, toggleModalState, clickImgSetID } = props;
 
   const mappedPhotos = photos.map(photo => {
     return (
@@ -17,8 +17,10 @@ const PhotoList = (props) => {
         id={photo.id}
         like={like}
         toggleModalState={toggleModalState}
-        clickImgSetURL={clickImgSetURL}
-        hideUserName={photo.hideUserName} />
+        clickImgSetID={clickImgSetID}
+        hideUserName={photo.hideUserName}
+        city={photo.location.city}
+        country={photo.location.country} />
     );
   });
 
