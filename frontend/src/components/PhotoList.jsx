@@ -20,7 +20,8 @@ const PhotoList = (props) => {
         clickImgSetID={clickImgSetID}
         hideUserName={photo.hideUserName}
         city={photo.location.city}
-        country={photo.location.country} />
+        country={photo.location.country}
+        profile={photo.user.profile} />
     );
   });
 

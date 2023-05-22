@@ -4,7 +4,7 @@ import PhotoFavButton from './PhotoFavButton';
 import '../styles/PhotoListItem.scss';
 
 const PhotoListItem = (props) => {
-  const { username, imageSource, id, like, toggleModalState, clickImgSetID, hideUserName, city, country } = props;
+  const { username, imageSource, id, like, toggleModalState, clickImgSetID, hideUserName, city, country, profile } = props;
 
   const clickHandler = () => {
     toggleModalState();
@@ -17,7 +17,7 @@ const PhotoListItem = (props) => {
         src={imageSource}
         onClick={clickHandler} />
       <div className='photo-list--user-details'>
-        <div className="photo-list--user-profile"></div>
+        <img className="photo-list--user-profile" src={profile} />
         <div className='photo-list--user-info'>
           {!hideUserName && <span>{username}</span>}
           <div className="photo-list--user-location">

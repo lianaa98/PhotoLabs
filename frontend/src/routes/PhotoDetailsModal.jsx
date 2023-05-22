@@ -19,7 +19,7 @@ export const PhotoDetailsModal = (props) => {
         <PhotoFavButton like={like} photo_id={clickedImageInfo[0].id} />
         <img src={clickedImageInfo[0].urls.full} />
         <div className='photo-list--user-details'>
-          <div className="photo-list--user-profile"></div>
+        <img className="photo-list--user-profile" src={clickedImageInfo[0].user.profile} />
           <div className='photo-list--user-info'>
             <span>{clickedImageInfo[0].user.name}</span>
             <div className="photo-list--user-location">

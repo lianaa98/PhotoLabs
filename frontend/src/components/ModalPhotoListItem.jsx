@@ -4,7 +4,7 @@ import PhotoFavButton from './PhotoFavButton';
 import '../styles/PhotoListItem.scss';
 
 const ModalPhotoListItem = (props) => {
-  const { username, imageSource, id, like, hideUserName, city, country } = props;
+  const { username, imageSource, id, like, hideUserName, city, country, profile } = props;
 
   return (
     <div className="photo-list-item">
@@ -12,7 +12,7 @@ const ModalPhotoListItem = (props) => {
       <img className="photo-list--image"
         src={imageSource} />
       <div className='photo-list--user-details'>
-        <div className="photo-list--user-profile"></div>
+      <img className="photo-list--user-profile" src={profile} />
         <div className='photo-list--user-info'>
           {!hideUserName && <span>{username}</span>}
           <div className="photo-list--user-location">
