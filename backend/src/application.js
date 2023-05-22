@@ -10,6 +10,7 @@ const app = express();
 
 const photos = require("./routes/photos");
 const topics = require("./routes/topics");
+const db = require('./db/index')
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -32,10 +33,11 @@ module.exports = function application(
   app.use(cors());
   app.use(helmet());
   app.use(bodyparser.json());
+  app.use(express.static(path.join(__dirname, 'public')));
 
   // TODO: update to topics and photos
-  app.use("/api", photos());
-  app.use("/api", topics());
+  app.use("/api", photos(db));
+  app.use("/api", topics(db));
 
   if (ENV === "development" || ENV === "test") {
     Promise.all([
