@@ -7,6 +7,9 @@ import PhotoFavButton from '../components/PhotoFavButton';
 export const PhotoDetailsModal = (props) => {
 
   const { closeModal, like, PhotoData, clickedImgID } = props;
+  console.log(PhotoData);
+  console.log("hello", clickedImgID);
+  console.log(PhotoData[0].id);
 
   const displayOneImg = () => {
 
@@ -14,7 +17,7 @@ export const PhotoDetailsModal = (props) => {
     return (
       <div className="card">
         <PhotoFavButton like={like} photo_id={clickedImageInfo[0].id} />
-        <img src={clickedImageInfo[0].urls.small} />
+        <img src={clickedImageInfo[0].urls.full} />
         <div className='photo-list--user-details'>
           <div className="photo-list--user-profile"></div>
           <div className='photo-list--user-info'>

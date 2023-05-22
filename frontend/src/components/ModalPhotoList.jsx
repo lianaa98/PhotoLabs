@@ -11,7 +11,7 @@ const ModalPhotoList = (props) => {
   const mappedPhotos = photos.map(photo => {
     return (
       <ModalPhotoListItem username={photo.user.name}
-        imageSource={photo.urls.thumb}
+        imageSource={photo.urls.regular}
         key={photo.id}
         id={photo.id}
         like={like}
