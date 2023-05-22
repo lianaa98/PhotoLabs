@@ -4,8 +4,6 @@ import TopicList from './TopicList';
 import FavBadge from './FavBadge';
 import '../styles/TopNavigationBar.scss'
 
-// import TopicData from '../mocks/topics.json';
-
 const TopNavigation = (props) => {
 
   const {favPhotoExist, TopicData, selectTopic} = props;

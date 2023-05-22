@@ -3,7 +3,6 @@ import './App.scss';
 import HomeRoute from './routes/HomeRoute';
 import PhotoDetailsModal from './routes/PhotoDetailsModal';
 import useApplicationData from './hooks/useApplicationData';
-// import PhotoData from './mocks/photos.json';
 import axios from 'axios';
 
 // Note: Rendering a single component to build components in isolation
@@ -37,8 +36,6 @@ const App = () => {
       .catch(err => console.log(err));
 
   }, []);
-
-  console.log("selectedTopic", selectedTopic);
 
   const selectTopic = (id) => {
     setSelectedTopic(id);
