@@ -8,12 +8,12 @@ import '../styles/TopNavigationBar.scss'
 
 const TopNavigation = (props) => {
 
-  const {favPhotoExist, TopicData} = props;
+  const {favPhotoExist, TopicData, selectTopic} = props;
 
   return (
     <div className="top-nav-bar">
-      <span className="top-nav-bar--logo">PhotoLabs</span>
-      <TopicList topics={TopicData}/>
+      <span className="top-nav-bar--logo" onClick={() => selectTopic(null)}>PhotoLabs</span>
+      <TopicList topics={TopicData} selectTopic={selectTopic}/>
       <FavBadge isFavPhotoExist={favPhotoExist}/>
     </div>
   )

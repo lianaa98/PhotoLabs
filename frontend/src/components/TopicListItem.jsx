@@ -3,9 +3,9 @@ import React from 'react';
 import '../styles/TopicListItem.scss'
 
 const TopicListItem = (props) => {
-  const {id, label, link} = props;
+  const {id, label, link, selectTopic} = props;
   return (
-  <div className="topic-list--item">
+  <div className="topic-list--item" onClick={() => selectTopic(id)}>
     <span>{label}</span>
   </div>
   )

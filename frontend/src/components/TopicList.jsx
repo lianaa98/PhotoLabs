@@ -4,10 +4,10 @@ import TopicListItem from './TopicListItem';
 import '../styles/TopicList.scss';
 
 const TopicList = (props) => {
-  const { topics } = props;
+  const { topics, selectTopic } = props;
 
   const mappedTopics = topics.map(topic => {
-    return <TopicListItem key={topic.id} label={topic.title} link="placeholder" />;
+    return <TopicListItem key={topic.id} id={topic.id} label={topic.title} link="placeholder" selectTopic={selectTopic} />;
   });
 
   return (
